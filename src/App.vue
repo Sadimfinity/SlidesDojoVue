@@ -45,7 +45,7 @@
 <script>
 import { Slideshow } from 'eagle.js'
 export default {
-  mixins: [eagle.slideshow],
+  mixins: [Slideshow],
   name: 'app'
 }
 </script>
