@@ -95,7 +95,6 @@ export default {
   }
   .local-eg-theme-foreword {
     @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
-    background: url('./assets/pw_maze_black.png') repeat;
     font-family: 'EB Garamond';
     color: #ccc;
     .eg-slide-content {
@@ -147,7 +146,7 @@ export default {
   }
   .local-eg-theme-city {
     @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-    @import './assets/monokai';
+
     .eg-code-block {
       margin-top: 30%;
     }
