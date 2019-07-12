@@ -2,21 +2,44 @@
 #ThemesSlideshow
   .eg-slideshow
 
-    slide.local-eg-theme-artic(enter='fadeIn' leave='fadeOut')
-      h1 Themes<br />Slideshow
+    slide.local-eg-Title(enter='fadeIn' leave='fadeOut')
+      .center
+        h3 Vue
+        img(src='./assets/logo.png')
+        h6 Santiago Gaviria Zapata<br>Santiago Gaviria Zapta<br>Santiago Gaviria Zata<br>Santiago Gaviria Zapta<br>Santiago Gaviria Zaa 
 
-    slide.local-eg-theme-foreword(enter='fadeIn' leave='fadeOut')
+    slide.local-eg-Title(enter='fadeIn' leave='fadeOut')
       eg-transition(enter='fadeInDown')
-        p.
-          FOREWORD <br />
-          The next slides can also be seen in "Introducing Eagle",
-          where they are programmatically inserted.
+        h3 ¿Qué es Vue.js?
+          h6 Vue es un framework de Javascript orientado del lado del Cliente (front-end) para interfaces de usuario progresivas
 
-    slide.local-eg-theme-bretagne(enter='fadeIn' leave='none')
-      eg-transition(enter='fadeInDown')
-        h3 About Themes
+    slide.local-eg-labels(:steps=6, enter='bounceInDown')
+      h3 What's in it for you
 
-    slide.local-eg-theme-forest-road(enter='fadeIn' leave='none')
+      eg-transition(enter='fadeIn' leave='fadeOut')
+        .quarter(v-if='step >=2')
+          img(src='./assets/basic_paperplane.svg')
+          h4 REACTIVO
+          p Clear syntax, live preview
+
+      eg-transition(enter='fadeIn' leave='fadeOut')
+        .quarter(v-if='step >=3')
+          img(src='./assets/basic_share.svg')
+          h4 ACCESIBLE
+          p Si conoces HTML5, CSS Y JavaScript;<br> aprender Vue es cuestión de muy poco tiempo
+
+      eg-transition(enter='fadeIn' leave='fadeOut')
+        .quarter(v-if="step >= 4")
+         img(src='./assets/basic_mixer2.svg')
+         h4 VERSATIL
+         p Un ecosistema que se puede adoptar de forma incremental
+
+      eg-transition(enter='fadeIn' leave='fadeOut')
+        .quarter(v-if="step >= 5")
+          img(src='./assets/basic_display.svg')
+          h4 RENDIMIENTO
+          p Al igual que React.js posee un Virtual DOM
+    slide.local-eg-Title(enter='fadeIn' leave='none')
       eg-transition(enter='fadeInLeft')
         h3 You can change everything
 
@@ -29,17 +52,6 @@
         eg-code-block(lang='html').
           //- Use CSS classes to theme the slideshow or just one slide
 
-          #MySlideshow.eg-theme-dark //- General theme for the slideshow
-            .eg-slideshow
-              slide
-                h1 I am the darkness !
-              slide.eg-theme-light //- slide-specific theme
-                h1 Sometimes I am the light too
-                slide.local-eg-theme-bretagne
-
-    slide.local-eg-theme-space(enter='fadeIn'  leave='fadeOut')
-      eg-transition(enter='zoomIn')
-        h3 Your bad taste is the limit
 </template>
 
 <script>
@@ -93,82 +105,65 @@ export default {
                    0 0.2em 0.2em rgba(0,0,0,.15);
     }
   }
-  .local-eg-theme-foreword {
-    @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
-    font-family: 'EB Garamond';
-    color: #ccc;
-    .eg-slide-content {
-      max-width: 90%;
-      width: 15em;
-    }
-    p {
-      margin-top: 30%;
-    }
-  }
-  .local-eg-theme-bretagne {
+  .local-eg-text {
     @import url(https://fonts.googleapis.com/css?family=Pompiere);
     h3 {
       // letter-spacing: 1px;
       font-family: 'Pompiere';
       text-transform: none;
-      font-size: 3em;
+      font-size: 2em;
       color: rgba(255, 255, 255, .6);
     }
     background-image: url(https://i.imgur.com/rYkJ6I8.jpg);
     background-position: center;
     background-size: cover;
   }
-  .local-eg-theme-forest-road {
+  .local-eg-Title {
     @import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
     h3 {
       font-family: 'Cabin Sketch';
-      margin-top: 50%;
-      text-align: left;
-      color: rgba(255, 255, 255, .9);
+      color: rgba(0, 0, 0, 1);
     }
-    background-image: url(https://i.imgur.com/hxTMFZW.jpg);
-    background-position: center;
-    background-size: cover;
-  }
-  .local-eg-theme-spark {
-    @import url(https://fonts.googleapis.com/css?family=Special+Elite);
-    h3 {
-      position: absolute;
-      font-family: 'Special Elite';
-      color: rgba(255, 255, 255, .8);
+    h6 {
+      font-family: 'Pompiere';
       font-size: 1em;
-      bottom: 10%;
-      float: left;
+      color: rgba(0, 0, 0, 0.9);
     }
-    background-image: url(https://i.imgur.com/FL9mwpd.jpg);
-    background-position: center;
-    background-size: cover;
+    img {
+      height: 11em;
+    }
+    img.control-schema {
+      width: 10em;
+      height: 3em;
+      align-content: center;
+    }
+    background-image: url('./assets/background.png');
   }
-  .local-eg-theme-city {
-    @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-
-    .eg-code-block {
-      margin-top: 30%;
-    }
-    .code-box {
-      box-shadow: 0 0 0.25em 0.25em #ddd
-    }
-    background-image: url(https://i.imgur.com/kmmHith.jpg);
-    background-position: center;
-    background-size: cover;
-  }
-  .local-eg-theme-space {
-    @import url(https://fonts.googleapis.com/css?family=Forum);
+  .local-eg-labels {
+    @import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
     h3 {
-      font-family: 'Forum';
-      font-size: 1.5em;
-      color: rgba(255, 255, 255, 0.75);
-      letter-spacing: 1.5px;
-      margin-top: 50%
+      font-family: 'Cabin Sketch';
+      color: rgba(0, 0, 0, 1);
     }
-    background-image: url(https://i.imgur.com/yO2ivoD.jpg);
-    background-position: center;
-    background-size: cover;
+    h6 {
+      font-family: 'Pompiere';
+      font-size: 1em;
+      color: rgba(0, 0, 0, 0.9);
+    }
+    background-image: url('./assets/background.png');
+  }
+  .quarter {
+    text-align: center;
+    p {
+      font-family: 'Pompiere';
+      margin-top: 0;
+      text-align: center;
+    }
+    h4 {
+      font-family: 'Pompiere';
+      margin-top: 0;
+      margin-bottom: 0
+    }
   }
 }
 </style>
