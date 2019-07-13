@@ -38,7 +38,7 @@
         .quarter(v-if="step >= 5")
           img(src='./assets/basic_display.svg')
           h4 PERFORMANT
-          p Al igual que React.js posee un DOM<br> Virtual.
+          p Al igual que React.js, Vue posee un <br>DOM Virtual.
 
     slide.local-eg-text(enter='fadeIn' leave='fadeOut')
         h3 Diferencias
@@ -50,6 +50,22 @@
           h4 A parte de las directivas siguientes: 
           h5 v-if<br>v-for<br>v-model<br>v-bind*<br>v-show<br>v-on:[event] = v-on:click
           h4 Vue también permite crear directivas personalizadas según sea necesario manipular el HTML
+    
+    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
+        h3 Diferencias
+        img(src = './assets/AngularReact.png')
+
+    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
+        h3 Directiva 1
+        img(src = './assets/AngularReact.png')
+
+    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
+        h3 Directiva 2
+        img(src = './assets/AngularReact.png')
+
+    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
+        h3 Directiva 3
+        img(src = './assets/AngularReact.png')
 
     slide.local-eg-theme-city(enter='fadeIn' leave='fadeOut')
       eg-transition(enter='flipInX')
@@ -74,6 +90,10 @@
       eg-transition(enter='fadeInDown')
         h3 Componentes principales
           img(src='./assets/parts.jpg')
+
+    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
+        h3 It's coding time!
+        img(src='./assets/giphy.gif')
 </template>
 
 <script>
