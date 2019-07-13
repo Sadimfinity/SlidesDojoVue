@@ -6,7 +6,7 @@
       .center
         h3 Vue
         img(src='./assets/logo.png')
-        h6 Santiago Gaviria Zapata<br>Santiago Gaviria Zapta<br>Santiago Gaviria Zata<br>Santiago Gaviria Zapta<br>Santiago Gaviria Zaa 
+        h6 Santiago Gaviria Zapata<br>Danny Francisco Hernández<br>Santiago Alexis Sánchez<br>Raul Andrés Gomez<br>Wildey Alejandro Gallego 
 
     slide.local-eg-Title(enter='fadeIn' leave='fadeOut')
       eg-transition(enter='fadeInDown')
@@ -31,7 +31,7 @@
       eg-transition(enter='fadeIn' leave='fadeOut')
         .quarter(v-if="step >= 4")
          img(src='./assets/basic_mixer2.svg')
-         h4 VERSATIL
+         h4 VERSÁTIL
          p Un ecosistema que se puede adoptar <br>de forma incremental.
 
       eg-transition(enter='fadeIn' leave='fadeOut')
@@ -50,22 +50,15 @@
           h4 A parte de las directivas siguientes: 
           h5 v-if<br>v-for<br>v-model<br>v-bind*<br>v-show<br>v-on:[event] = v-on:click
           h4 Vue también permite crear directivas personalizadas según sea necesario manipular el HTML
-    
-    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
-        h3 Diferencias
-        img(src = './assets/AngularReact.png')
 
     slide.local-eg-text(enter='fadeIn' leave='fadeOut')
-        h3 Directiva 1
-        img(src = './assets/AngularReact.png')
+        h1 Teniendo el siguiente código como ejemplo
+          img(src = './assets/codigo.jpg')
 
-    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
-        h3 Directiva 2
-        img(src = './assets/AngularReact.png')
-
-    slide.local-eg-text(enter='fadeIn' leave='fadeOut')
-        h3 Directiva 3
-        img(src = './assets/AngularReact.png')
+    slide.local-eg-LastOne(enter='fadeIn' leave='fadeOut')
+        h6 Podemos ejecutar las siguientes directivas
+          img(src = './assets/v-for.jpg')
+          img(src='./assets/v-on.jpg')
 
     slide.local-eg-theme-city(enter='fadeIn' leave='fadeOut')
       eg-transition(enter='flipInX')
@@ -123,6 +116,11 @@ export default {
     @import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
     img {
       max-width: 110%;
+    }
+    h1 {
+      font-family: "Pompiere";
+      font-size: 1em;
+      color: rgba(0, 0, 0, 0.9);
     }
     h3 {
       font-family: "Cabin Sketch";
